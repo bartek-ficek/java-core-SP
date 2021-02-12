@@ -2,7 +2,7 @@ package pl.bartek.ficek.arrays;
 
 import java.util.Arrays;
 
-public class Main {
+public class TopicContent {
 
     public static void main(String[] args) {
 
