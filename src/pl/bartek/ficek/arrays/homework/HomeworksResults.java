@@ -45,6 +45,6 @@ public class HomeworksResults {
 
         //Exercise d:
         ChestBoard kasparovState = ChestBoard.fillByKasparovFinalState();
-        System.out.println(Arrays.deepToString(kasparovState.getBoard()));
+        System.out.println(Arrays.deepToString(kasparovState.getBoard()))   ;
     }
 }
