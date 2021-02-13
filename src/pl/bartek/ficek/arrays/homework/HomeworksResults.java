@@ -3,6 +3,7 @@ package pl.bartek.ficek.arrays.homework;
 import pl.bartek.ficek.arrays.homework.a.ArrayA;
 import pl.bartek.ficek.arrays.homework.b.ArrayB;
 import pl.bartek.ficek.arrays.homework.c.Sudoku;
+import pl.bartek.ficek.arrays.homework.d.ChestBoard;
 
 import java.util.Arrays;
 
@@ -40,5 +41,10 @@ public class HomeworksResults {
         Sudoku exampleBoard = fillEmptyBoard();
         System.out.println(Arrays.deepToString(exampleBoard.getBoard()));
 
+        System.out.println(BREAKER);
+
+        //Exercise d:
+        ChestBoard kasparovState = ChestBoard.fillByKasparovFinalState();
+        System.out.println(Arrays.deepToString(kasparovState.getBoard()));
     }
 }

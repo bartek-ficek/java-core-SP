@@ -8,6 +8,10 @@ public class ChestBoard {
         this.board = board;
     }
 
+    public Piece[][] getBoard() {
+        return board;
+    }
+
     public static ChestBoard fillByKasparovFinalState() {
         Piece[][] finalState = new Piece[8][8];
 
