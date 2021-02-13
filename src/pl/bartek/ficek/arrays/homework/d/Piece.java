@@ -1,6 +1,6 @@
 package pl.bartek.ficek.arrays.homework.d;
 
-public enum ChessPiece {
+public enum Piece {
 
     EMPTY,
 
