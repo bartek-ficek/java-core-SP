@@ -2,15 +2,19 @@ package pl.bartek.ficek.arrays.homework.c;
 
 public class Sudoku {
 
-    private final Integer[][] emptyBoard;
+    private final Integer[][] board;
 
-    public Sudoku(Integer[][] emptyBoard) {
-        this.emptyBoard = emptyBoard;
+    public Sudoku(Integer[][] board) {
+        this.board = board;
     }
 
-    public static Integer[][] fillEmptyBoard() {
+    public Integer[][] getBoard() {
+        return board;
+    }
 
-        Integer[][] sampleBoard = new Integer[][]{};
+    public static Sudoku fillEmptyBoard() {
+
+        Integer[][] sampleBoard = new Integer[9][];
 
         sampleBoard[0] = new Integer[]{2, null, null, 6, null, 7, 5, null, null};
         sampleBoard[1] = new Integer[]{null, null, null, null, null, null, null, 9, 6};
@@ -24,6 +28,6 @@ public class Sudoku {
         sampleBoard[7] = new Integer[]{8, 4, null, null, null, null, null, null, null};
         sampleBoard[8] = new Integer[]{null, null, 5, 2, null, 6, null, null, 8};
 
-        return sampleBoard;
+        return new Sudoku(sampleBoard);
     }
 }

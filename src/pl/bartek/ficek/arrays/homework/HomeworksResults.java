@@ -2,6 +2,11 @@ package pl.bartek.ficek.arrays.homework;
 
 import pl.bartek.ficek.arrays.homework.a.ArrayA;
 import pl.bartek.ficek.arrays.homework.b.ArrayB;
+import pl.bartek.ficek.arrays.homework.c.Sudoku;
+
+import java.util.Arrays;
+
+import static pl.bartek.ficek.arrays.homework.c.Sudoku.fillEmptyBoard;
 
 public class HomeworksResults {
 
@@ -28,6 +33,12 @@ public class HomeworksResults {
         //Exercise b Solution SECOND WAY:
         int resultB2=arrayB.greatestValueNoIf(exampleArray);
         System.out.println(resultB2);
+
+        System.out.println(BREAKER);
+
+        //Exercise c:
+        Sudoku exampleBoard = fillEmptyBoard();
+        System.out.println(Arrays.deepToString(exampleBoard.getBoard()));
 
     }
 }
