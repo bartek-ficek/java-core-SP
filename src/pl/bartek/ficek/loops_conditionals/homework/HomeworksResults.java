@@ -1,6 +1,7 @@
 package pl.bartek.ficek.loops_conditionals.homework;
 
 import pl.bartek.ficek.loops_conditionals.homework.a.LoopA;
+import pl.bartek.ficek.loops_conditionals.homework.b.LoopB;
 
 public class HomeworksResults {
 
@@ -10,6 +11,11 @@ public class HomeworksResults {
 
         //Exercise a solution:
         LoopA.writeNumbers();
+
+        System.out.println(BREAKER);
+
+        //Exercise b solution:
+        LoopB.writeNumbers();
 
         System.out.println(BREAKER);
 
