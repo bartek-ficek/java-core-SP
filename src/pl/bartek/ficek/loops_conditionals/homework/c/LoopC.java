@@ -7,4 +7,12 @@ public class LoopC {
             System.out.println(i);
         }
     }
+
+    public static void writeNumbers2() {
+        for (int i = -10; i <= 40 ; i++) {
+            if (i % 2 ==0) continue;
+            System.out.println(i);
+        }
+    }
+
 }
