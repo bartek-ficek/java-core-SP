@@ -2,6 +2,7 @@ package pl.bartek.ficek.loops_conditionals.homework;
 
 import pl.bartek.ficek.loops_conditionals.homework.c.LoopC;
 import pl.bartek.ficek.loops_conditionals.homework.d.LoopD;
+import pl.bartek.ficek.loops_conditionals.homework.e.LoopE;
 
 public class HomeworksResults {
 
@@ -25,9 +26,14 @@ public class HomeworksResults {
 //        //Exercise c solution 2:
 //        LoopC.writeNumbers2();
 //        System.out.println(BREAKER);
+//
+//        //Exercise d solution:
+//        LoopD.writeNumbers();
+//        System.out.println(BREAKER);
+//
 
-        //Exercise d solution:
-        LoopD.writeNumbers();
+        //Exercise e solution:
+        LoopE.sumFromArray(new int[] {0,4,6});
         System.out.println(BREAKER);
 
     }
