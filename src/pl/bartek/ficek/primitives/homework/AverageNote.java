@@ -13,11 +13,11 @@ public class AverageNote {
         Scanner scanner = new Scanner(System.in);
 
         for (int subjectId = 0; subjectId < tableOfNotes.length; subjectId++) {
-            System.out.println("Type " + subjectId + 1 + " class.");
-            String subject = scanner.nextLine();
+            System.out.println("Type " + (subjectId + 1) + " subject:");
+            String subject = scanner.next();
 
             for (int noteId = 0; noteId < tableOfNotes[subjectId].length; noteId++) {
-                System.out.println(subject + " - Type " + noteId + 1 + " note.");
+                System.out.println("Type " + (noteId + 1) + " note in " + subject + ":");
                 tableOfNotes[subjectId][noteId] = scanner.nextInt();
             }
         }
