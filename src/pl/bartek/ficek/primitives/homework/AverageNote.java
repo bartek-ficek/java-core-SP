@@ -1,5 +1,6 @@
 package pl.bartek.ficek.primitives.homework;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AverageNote {
@@ -28,6 +29,10 @@ public class AverageNote {
                 sumOfNotes += note;
             }
         }
+
+        System.out.println("\n All DEGREES:");
+        System.out.println(Arrays.deepToString(tableOfNotes));
+        System.out.println("\n AVERAGE DEGREE:");
 
         return (float) sumOfNotes/(NUMBER_OF_SUBJECTS*NUMBER_OF_NOTES);
     }
