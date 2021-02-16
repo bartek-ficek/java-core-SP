@@ -5,27 +5,22 @@ import java.util.Scanner;
 
 public class AverageGrade {
 
-
-    private int[][] tableOfGrades;
-    private int numberOfSubjects;
-    private int numberOfNotes;
-    private String[] arrayOfSubjects;
+    private final int[][] tableOfGrades;
+    private final int numberOfSubjects;
+    private final String[] arrayOfSubjects;
 
     public AverageGrade(int numberOfSubjects, int numberOfNotes) {
         this.numberOfSubjects = numberOfSubjects;
-        this.numberOfNotes = numberOfNotes;
         tableOfGrades = new int[numberOfSubjects][numberOfNotes];
         arrayOfSubjects = new String[numberOfSubjects];
     }
 
     public void takeNotesFromStudent() {
         Scanner scanner = new Scanner(System.in);
-
         for (int subjectId = 0; subjectId < tableOfGrades.length; subjectId++) {
             System.out.println("Type " + (subjectId + 1) + " subject:");
             String subjectName = scanner.next();
             arrayOfSubjects[subjectId] = subjectName;
-
             for (int noteId = 0; noteId < tableOfGrades[subjectId].length; noteId++) {
                 System.out.println("Type " + (noteId + 1) + " note in " + subjectName + ":");
                 tableOfGrades[subjectId][noteId] = scanner.nextInt();
@@ -34,7 +29,6 @@ public class AverageGrade {
     }
 
     public void printGradesAndAverages() {
-
         float totalAverage = 0;
         int subjectId = 0;
         for (int[] subject : tableOfGrades) {
@@ -46,8 +40,8 @@ public class AverageGrade {
             float subjectAverage = (float) sumOfNotesInSubject / subject.length;
 
             float multipliedAverage = subjectAverage * 100; // rounding
-            int multipliedAndRounded = Math.round(multipliedAverage);
-            multipliedAverage = (float) multipliedAndRounded / 100;
+            int multipliedAndRounded = Math.round(multipliedAverage); // rounding
+            multipliedAverage = (float) multipliedAndRounded / 100; // rounding
 
             System.out.println(subjectName + ": " + Arrays.toString(tableOfGrades[subjectId]) + "; Average degree: " + multipliedAverage);
             totalAverage += subjectAverage;
@@ -58,8 +52,8 @@ public class AverageGrade {
         totalAverage /= numberOfSubjects;
 
         float multipliedTotalAverage = totalAverage * 100; // rounding
-        int multipliedAndRoundedTotal = Math.round(multipliedTotalAverage);
-        multipliedTotalAverage = (float) multipliedAndRoundedTotal / 100;
+        int multipliedAndRoundedTotal = Math.round(multipliedTotalAverage); // rounding
+        multipliedTotalAverage = (float) multipliedAndRoundedTotal / 100; // rounding
 
         System.out.println(multipliedTotalAverage);
     }
