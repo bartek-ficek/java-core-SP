@@ -9,15 +9,16 @@ public class AverageGrade {
     private int[][] tableOfGrades;
     private int numberOfSubjects;
     private int numberOfNotes;
-    private String[] arrayOfSubjects = new String[numberOfSubjects];
+    private String[] arrayOfSubjects;
 
     public AverageGrade(int numberOfSubjects, int numberOfNotes) {
         this.numberOfSubjects = numberOfSubjects;
         this.numberOfNotes = numberOfNotes;
         tableOfGrades = new int[numberOfSubjects][numberOfNotes];
+        arrayOfSubjects = new String[numberOfSubjects];
     }
 
-    private void takeNotesFromStudent() {
+    public void takeNotesFromStudent() {
         Scanner scanner = new Scanner(System.in);
 
         for (int subjectId = 0; subjectId < tableOfGrades.length; subjectId++) {
@@ -34,23 +35,21 @@ public class AverageGrade {
 
     public void printGradesAndAverages() {
 
-        int sumOfNotesInSubject = 0;
         float totalAverage = 0;
+        int subjectId = 0;
         for (int[] subject : tableOfGrades) {
-            int subjectId = 0;
+            int sumOfNotesInSubject = 0;
             String subjectName = arrayOfSubjects[subjectId];
-            subjectId++;
             for (int note : subject) {
                 sumOfNotesInSubject += note;
             }
             float subjectAverage = (float) sumOfNotesInSubject / subject.length;
-            System.out.println("Average degree in " + subjectName + ":  " + subjectAverage);
+            System.out.println(subjectName + ": " + Arrays.toString(tableOfGrades[subjectId]) + "; Average degree: " + subjectAverage);
             totalAverage += subjectAverage;
+            subjectId++;
         }
 
-        System.out.println("\n All DEGREES:");
-        System.out.println(Arrays.deepToString(tableOfGrades));
-        System.out.println("\n AVERAGE DEGREE:");
+        System.out.println("\n TOTAL AVERAGE DEGREE:");
 
         totalAverage /= numberOfSubjects;
         System.out.println(totalAverage);
