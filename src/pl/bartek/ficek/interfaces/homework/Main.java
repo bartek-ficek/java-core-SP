@@ -11,9 +11,9 @@ public class Main {
         Computation computation;
 
         if (main.shouldMultiply()) {
-            computation = new Multiplication(); // zaimplementuj brakującą klasę
+            computation = new Multiplication();
         } else {
-            computation = new Addition(); // zaimplementuj brakującą klasę
+            computation = new Addition();
         }
 
         double argument1 = main.getArgument();
