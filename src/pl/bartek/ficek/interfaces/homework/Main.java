@@ -3,6 +3,9 @@ package pl.bartek.ficek.interfaces.homework;
 import java.util.Scanner;
 
 public class Main {
+
+    Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         Main main = new Main();
         Computation computation;
@@ -21,7 +24,6 @@ public class Main {
     }
 
     private boolean shouldMultiply() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please type \"M/m\" for multiplication or \"A/a\" for addition two numbers: \n");
         String choice = scanner.next();
         boolean decision;
@@ -41,6 +43,8 @@ public class Main {
     }
 
     private double getArgument() {
-        return 0; // tutaj pobierz liczbę od użytkownika
+
+        System.out.println("Type number to calculate");
+        return scanner.nextDouble();
     }
 }
