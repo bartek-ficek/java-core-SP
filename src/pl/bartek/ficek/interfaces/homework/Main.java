@@ -1,5 +1,7 @@
 package pl.bartek.ficek.interfaces.homework;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
@@ -7,8 +9,7 @@ public class Main {
 
         if (main.shouldMultiply()) {
             computation = new Multiplication(); // zaimplementuj brakującą klasę
-        }
-        else {
+        } else {
             computation = new Addition(); // zaimplementuj brakującą klasę
         }
 
@@ -20,7 +21,23 @@ public class Main {
     }
 
     private boolean shouldMultiply() {
-        return false; // tutaj zapytaj użytkownika co chce zrobić (mnożenie czy dodawanie)
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please type \"M/m\" for multiplication or \"A/a\" for addition two numbers: \n");
+        String choice = scanner.next();
+        boolean decision;
+        do {
+            if (choice.equalsIgnoreCase("M")) {
+                decision = true;
+                break;
+            } else if (choice.equalsIgnoreCase("A")) {
+                decision = false;
+                break;
+            } else {
+                System.out.println("Please type correct command.");
+            }
+        } while (true);
+
+        return decision;
     }
 
     private double getArgument() {
