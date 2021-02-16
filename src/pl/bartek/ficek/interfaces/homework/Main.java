@@ -24,10 +24,12 @@ public class Main {
     }
 
     private boolean shouldMultiply() {
-        System.out.println("Please type \"M/m\" for multiplication or \"A/a\" for addition two numbers: \n");
-        String choice = scanner.next();
         boolean decision;
+        System.out.println("\nPlease type \"M/m\" for multiplication or \"A/a\" for addition of two numbers: \n");
+
         do {
+            String choice = scanner.next();
+
             if (choice.equalsIgnoreCase("M")) {
                 decision = true;
                 break;
@@ -36,6 +38,7 @@ public class Main {
                 break;
             } else {
                 System.out.println("Please type correct command.");
+                continue;
             }
         } while (true);
 
@@ -43,7 +46,6 @@ public class Main {
     }
 
     private double getArgument() {
-
         System.out.println("Type number to calculate");
         return scanner.nextDouble();
     }
