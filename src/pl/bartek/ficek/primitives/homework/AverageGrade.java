@@ -44,14 +44,23 @@ public class AverageGrade {
                 sumOfNotesInSubject += note;
             }
             float subjectAverage = (float) sumOfNotesInSubject / subject.length;
-            System.out.println(subjectName + ": " + Arrays.toString(tableOfGrades[subjectId]) + "; Average degree: " + subjectAverage);
+
+            float multipliedAverage = subjectAverage * 100; // rounding
+            int multipliedAndRounded = Math.round(multipliedAverage);
+            multipliedAverage = (float) multipliedAndRounded / 100;
+
+            System.out.println(subjectName + ": " + Arrays.toString(tableOfGrades[subjectId]) + "; Average degree: " + multipliedAverage);
             totalAverage += subjectAverage;
             subjectId++;
         }
 
-        System.out.println("\n TOTAL AVERAGE DEGREE:");
-
+        System.out.println("\nTOTAL AVERAGE DEGREE:");
         totalAverage /= numberOfSubjects;
-        System.out.println(totalAverage);
+
+        float multipliedTotalAverage = totalAverage * 100; // rounding
+        int multipliedAndRoundedTotal = Math.round(multipliedTotalAverage);
+        multipliedTotalAverage = (float) multipliedAndRoundedTotal / 100;
+
+        System.out.println(multipliedTotalAverage);
     }
 }
