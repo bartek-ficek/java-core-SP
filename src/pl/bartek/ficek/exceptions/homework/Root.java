@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 public class Root {
 
-    Scanner scanner = new Scanner(System.in);
+    public static double getCorrectDataFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Type the number to calculate square root: ");
 
-    public double getDataFromUser() {
         if (!scanner.hasNextDouble()) {
-            throw new NumberFormatException("Give the correct number");
+            throw new NumberFormatException("That's not a number. Give the correct one");
         }
-        double number = scanner.nextDouble();
-        return number;
+        return scanner.nextDouble();
     }
 
-    public void calculate(Double number) {
+    public static double calculate(Double number) {
         if (number < 0) {
             throw new IllegalArgumentException("Number has to be positive");
         }
-        double resultSquareRoot = Math.sqrt(number);
-        System.out.println(resultSquareRoot);
+        return Math.sqrt(number);
     }
 }
