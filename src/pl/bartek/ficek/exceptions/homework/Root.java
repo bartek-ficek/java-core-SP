@@ -8,15 +8,12 @@ public class Root {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type the number to calculate square root: ");
 
-        if (!scanner.hasNextDouble()) {
-            throw new NumberFormatException("That's not a number. Give the correct one");
-        }
         return scanner.nextDouble();
     }
 
     public static double calculate(Double number) {
         if (number < 0) {
-            throw new IllegalArgumentException("Number has to be positive");
+            throw new IllegalArgumentException(String.format("Square root from number %.2f doesn't exist. Number has to be positive", number));
         }
         return Math.sqrt(number);
     }
